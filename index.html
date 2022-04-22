@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <style>
+      .modal {
+        position: fixed;
+        display: none;
+        padding: 5rem;
+        margin: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="open">Open modal</button>
+    <div class="modal">
+      <h1>some type of stuff here</h1>
+      <button id="close">close modal</button>
+    </div>
+
+    <script>
+      const openBtn = document.getElementById("open");
+
+      const closeBtn = document.getElementById("close");
+
+      const modal = document.querySelector(".modal");
+
+      openBtn.addEventListener("click", (e) => {
+        toggleModal();
+      });
+
+      closeBtn.addEventListener("click", (e) => {
+        toggleModal();
+      });
+
+      function toggleModal() {
+        if (modal.style.display === "block") {
+          modal.style.display = "none";
+        } else {
+          modal.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
